@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<page layout="3columns" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <container name="helloworldcontainer" htmlTag="div" htmlClass="hello-world-container">
+            <block class="Az\Helloworld\Block\Helloworld" name="helloworld" template="Az_Helloworld::helloworld.phtml"/>
+        </container>
+        <referenceContainer name="content">
+            <block class="Az\Helloworld\Block\Helloworld" name="index.index" template="Az_Helloworld::helloworld.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="main">
+            <block class="Az\Helloworld\Block\Helloworld" name="main.hello" template="Az_Helloworld::index/index.phtml"/>
+            <container name="customcontainer" htmlTag="div" htmlClass="custom-container">
+                <block class="Az\Helloworld\Block\Helloworld" name="main.hello2" template="Az_Helloworld::index/index.phtml"/>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
